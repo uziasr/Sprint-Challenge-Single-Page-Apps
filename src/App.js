@@ -10,9 +10,10 @@ export default function App() {
   const addToCharacters = character => {
     setCharacters( [...characters, character] );
   }
+  console.log(characters)
   return (
     <main>
-      <Header />
-      <Route to='/characters' render={(props)=><CharacterList {...props} addToCharacters={addToCharacters}/>}/>
+      <Route exact path='/' component={Header}/>
+      <Route path='/characters' render={(props)=><CharacterList {...props} setChar={setCharacters}/>}/>
     </main>
   );}
