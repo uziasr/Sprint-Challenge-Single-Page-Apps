@@ -30,7 +30,7 @@ export default function App() {
   const handleChange = event => {
     setSearchTerm(event.target.value);
     const finalchars = updateCharacters(event.target.value)
-    console.log(finalchars)
+    setCharacters(finalchars)
   };
   return (
     <main>
